@@ -1,0 +1,21 @@
+{
+  "name": "optimal-trades",
+  "version": "1.0.0",
+  "description": "Determine the optimal sequence of unit trades based on a sequence of price values",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest --coverage"
+  },
+  "keywords": [],
+  "author": "Kevin A. Naudé",
+  "license": "ISC",
+  "dependencies": {
+    "big.js": "^6.1.1",
+    "fast-csv": "^4.3.6",
+    "yargs": "^16.2.0"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
+}
