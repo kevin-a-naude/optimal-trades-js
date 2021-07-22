@@ -68,3 +68,16 @@ test('produce optimal outer trades', () => {
     expect(trades[1].openAt).toStrictEqual(3);
     expect(trades[1].closeAt).toStrictEqual(4);
 });
+
+
+test('produce optimal edge trades', () => {
+    let [profit, trades] = solve([1,4,5,8], 1);
+    console.log(trades.map(item => item.toString()));
+
+    expect(profit).toStrictEqual(6);
+    expect(trades.length).toStrictEqual(2);
+    expect(trades[0].openAt).toStrictEqual(0);
+    expect(trades[0].closeAt).toStrictEqual(1);
+    expect(trades[1].openAt).toStrictEqual(2);
+    expect(trades[1].closeAt).toStrictEqual(3);
+});

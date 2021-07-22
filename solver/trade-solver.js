@@ -26,9 +26,12 @@ class TradeSolver {
             that closes on or before the i'th price-point.
         */
 
-        /* We keep up to N most recent prices and lists, where N is maxHold. */
+        /*
+            We keep up to N most recent prices, and N+1 most recent lists,
+            where N is maxHold.
+        */
         this.prices = new CyclicBuffer(maxHold);
-        this.candidateTradeLists = new CyclicBuffer(maxHold, TradeList.Empty);
+        this.candidateTradeLists = new CyclicBuffer(maxHold+1, TradeList.Empty);
 
         this.recentPriceTime = undefined;
     }
